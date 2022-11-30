@@ -125,6 +125,9 @@
   .selectColor{
     cursor: pointer;
   }
+  .selectColor-text{
+    display: none;
+  }
 
   @media screen and (max-width: 600px){
     .noteList-add-note-contianer{
@@ -142,6 +145,15 @@
     }
     .selectColor{
         align-self: center;
+        width: 100%;
+    }
+    .selectColor-text{
+        color: #93E1D8;
+        display: block;
+        font-weight: normal;
+        font-size: 1rem;
+        text-align: start;
+        margin: 5px;
     }
 
     
