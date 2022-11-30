@@ -1,5 +1,6 @@
 import NoteList from "../Components/NoteList";
 
+
 const HomePage = () => {
     return (    
         <div>

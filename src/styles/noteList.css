@@ -125,3 +125,28 @@
   .selectColor{
     cursor: pointer;
   }
+
+  @media screen and (max-width: 600px){
+    .noteList-add-note-contianer{
+        flex-direction: column  ;
+        padding: 0;
+        align-items: normal;
+    }
+    .noteList-head-container{
+        padding: 0;
+        margin: 0;
+    }
+    .add-category-container{
+        flex-direction: column;
+        align-items: normal;
+    }
+    .selectColor{
+        align-self: center;
+    }
+
+    
+    
+
+ 
+
+  }

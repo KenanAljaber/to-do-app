@@ -63,3 +63,9 @@
     }
 
 }
+
+@media (max-width: 700px){
+    .note{
+        margin: 20px;
+    }
+}

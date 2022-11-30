@@ -1,7 +1,6 @@
 import Category from "./Category";
 import editPhoto from "../assets/edit.png";
 import deletePhoto from "../assets/delete.png";
-
 import "../styles/note.css"
 import { useState } from "react";
 

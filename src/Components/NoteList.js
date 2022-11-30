@@ -15,52 +15,6 @@ const NoteList = () => {
     const [tasks, setTasks] = useState([]);
 
 
-    const myNotes = [{
-        title: "Clean the dishes",
-        category: {
-            color: "red",
-            name: "Important"
-        }
-    }, {
-        title: "Clean the dishes",
-        category: {
-            color: "red",
-            name: "Important"
-        }
-    }, {
-        title: "Clean the dishes",
-        category: {
-            color: "red",
-            name: "Important"
-        }
-    }, {
-        title: "Clean the dishes",
-        category: {
-            color: "red",
-            name: "Important"
-        }
-    }, {
-        title: "Clean the dishes",
-        category: {
-            color: "red",
-            name: "Important"
-        }
-    }, {
-        title: "Clean the dishes",
-        category: {
-            color: "red",
-            name: "Important"
-        }
-    }, {
-        title: "Clean the dishes",
-        category: {
-            color: "red",
-            name: "Important"
-        }
-    }];
-
-
-
     const handleDropdownList = () => {
 
         setShowCategories(!showCategories);
@@ -137,9 +91,9 @@ const NoteList = () => {
 
     }
 
-   function updateNote(){
-    console.log("updated");
-   }
+    function updateNote() {
+        console.log("updated");
+    }
     return (
 
         <div className="noteList-container">
@@ -182,7 +136,7 @@ const NoteList = () => {
             <div className="noteList-line-underH3" />
             {
 
-                tasks.reverse().map((it,index) => {
+                tasks.reverse().map((it, index) => {
                     console.log("adding ")
                     let title = it.title;
                     let color = it.category.color;
@@ -197,7 +151,7 @@ const NoteList = () => {
 
                     return (
                         <div className="note-options" onClick={updateNote}>
-                          
+
                             <Note title={title} categoryColor={color} categoryName={categoryName} date={dateString} setTask={setTasks} task={tasks} index={index} />
                         </div>
                     );
