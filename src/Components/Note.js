@@ -4,9 +4,11 @@ import deletePhoto from "../assets/delete.png";
 import "../styles/note.css"
 import { useState } from "react";
 
-const Note = ({title,categoryColor,categoryName,date,setTask,task,index}) => {
-    console.log(date);
+const Note = ({title,categoryColor,categoryName,date,setTask,task}) => {
+  
     const [updateMood,setUpdateMood]=useState(false);
+   
+
     function onDeleteItem (e){
         const temp=task.filter((item)=> item.title!=title);
         setTask(temp);
@@ -20,6 +22,7 @@ const Note = ({title,categoryColor,categoryName,date,setTask,task,index}) => {
         setUpdateMood(!updateMood)
 
     }
+    
    
     return ( 
 
@@ -33,7 +36,7 @@ const Note = ({title,categoryColor,categoryName,date,setTask,task,index}) => {
                 {!updateMood?
                     <h1 className="note-title">{title}</h1>
                     :
-                    <div>
+                    <div style={{textAlign:"center"}}>
                     <input type="text" id="updateInput" defaultValue={title}/>
                     <button className="update-btn" onClick={onUpdate}>update</button>
                     </div>
