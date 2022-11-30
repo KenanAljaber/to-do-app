@@ -1,0 +1,20 @@
+
+.note-container{
+    flex-direction: row;
+    display: flex;
+    background: #93E1D8;
+    border-radius: 10px;
+    padding: 5px;
+    justify-content: space-between;
+    margin: 10px 150px 0px 150px;
+    align-items: flex-end;
+    margin-bottom: 15px;
+    
+}
+.note-title{
+    font-weight: 400;
+}
+.note-date{
+    font-style: italic;
+    font-weight: 600;
+}
