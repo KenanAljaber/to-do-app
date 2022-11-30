@@ -1,0 +1,71 @@
+
+.note-container{
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    
+}
+
+.note{
+    background: #93E1D8;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 10px 150px 0px 150px;
+    margin-bottom: 15px;
+    text-align: end;
+}
+.note-title{
+    font-weight: 400;
+}
+.icons{
+    text-align-last: end;}
+.note-date{
+    font-style: italic;
+    font-weight: 600;
+}
+.update-btn{
+
+    padding: 10px;
+    margin: 5px;
+    border-radius: 8px;
+    border-style: none;
+    background: #462255;
+    color: #93E1D8;
+    
+    font-weight: 500;
+    font-family: Roboto; 
+    cursor: pointer;
+
+}
+
+.note img{
+    width: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+   
+}
+
+.note img:hover{
+    animation: pop 1s linear 0.1s 1 alternate forwards;
+}
+
+@keyFrames pop{
+    0%{
+        transform: scale(100%);
+    }
+    50%{
+        transform: scale(125%);
+    }
+    100%{
+        transform: scale(100%);
+    }
+
+}
+
+@media (max-width: 700px){
+    .note{
+        margin: 20px;
+    }
+}

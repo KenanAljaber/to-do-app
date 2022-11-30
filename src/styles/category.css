@@ -1,0 +1,21 @@
+.category-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    padding-left: 10px;
+}
+
+
+
+.category-line{
+    width: 5px;
+    height: 15px;
+    border-radius: 10px;
+    
+}
+
+.category-name{
+    font-style: italic;
+    font-weight: 600;
+}
