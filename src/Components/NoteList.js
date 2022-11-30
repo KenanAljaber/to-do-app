@@ -126,6 +126,7 @@ const NoteList = () => {
                 </div>
                 <div className="add-category-container">
                     <input type="text" placeholder="add a category..." className="noteList-add-category-input" id="categoryTextInput" />
+                    <h6 className="selectColor-text">Select a color:</h6>
                     <input type="color" id="favcolor" className="selectColor" defaultValue="#462255" style={{ padding: "2px", margin: "3px" }} />
                     <button className="addNote-btn" onClick={addCategory}>Add Category</button>
                 </div>
