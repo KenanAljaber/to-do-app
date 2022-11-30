@@ -30,9 +30,6 @@ const Note = ({title,categoryColor,categoryName,date,setTask,task,index}) => {
             <img src={editPhoto} onClick={()=>setUpdateMood(!updateMood)}/>
                 <img src={deletePhoto} onClick={onDeleteItem}/>
                 </div>
-               <div className="note-container" >
-                
-                <Category className="note-category" color={categoryColor} name={categoryName}/>
                 {!updateMood?
                     <h1 className="note-title">{title}</h1>
                     :
@@ -42,6 +39,10 @@ const Note = ({title,categoryColor,categoryName,date,setTask,task,index}) => {
                     </div>
                 
                 }
+               <div className="note-container" >
+                
+                <Category className="note-category" color={categoryColor} name={categoryName}/>
+               
                 <p className="note-date">{date}</p>
                 </div>
             

@@ -67,7 +67,7 @@
 @media (max-width: 700px){
     .note{
         text-align: center;
-        font-size: clamp(0.4rem,0.5rem,1rem);
+        overflow-wrap: break-word;
         margin: 10px 0 0 0;
         
     }
@@ -77,8 +77,9 @@
     .note-title{
         width: -webkit-fill-available;
     font-weight: 500;
-    font-size: clamp(0.5rem,0.6rem,1rem);
+  
     }
+    
 
     
 }
