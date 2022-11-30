@@ -8,12 +8,13 @@ const Note = ({title,categoryColor,categoryName,date,setTask,task}) => {
   
     const [updateMood,setUpdateMood]=useState(false);
    
-
+    //handle delete
     function onDeleteItem (e){
         const temp=task.filter((item)=> item.title!=title);
         setTask(temp);
     }
 
+    //handle update
     function onUpdate(){
         const temp=[...task];
         const item=temp.find((item)=>item.title===title);
