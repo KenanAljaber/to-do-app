@@ -31,7 +31,7 @@ const NoteList = () => {
                 }
             };
             if (category) {
-                console.log("here", tasks);
+               
                 task.category.name = category.name;
                 task.category.color = category.color;
             }
@@ -41,11 +41,11 @@ const NoteList = () => {
         } else {
             alert("plase type something to add a task!")
         }
-        console.log();
+   
     }
 
     const addCategory = () => {
-        console.log();
+
         let color = document.getElementById("favcolor").value;
         let categoryName = document.getElementById("categoryTextInput").value;
         if (categoryName) {
@@ -91,9 +91,7 @@ const NoteList = () => {
 
     }
 
-    function updateNote() {
-        console.log("updated");
-    }
+
     return (
 
         <div className="noteList-container">
@@ -137,8 +135,7 @@ const NoteList = () => {
             <div className="noteList-line-underH3" />
             {
 
-                tasks.reverse().map((it, index) => {
-                    console.log("adding ")
+                tasks.slice().reverse().map((it, index) => {
                     let title = it.title;
                     let color = it.category.color;
                     let categoryName = it.category.name;
@@ -151,7 +148,7 @@ const NoteList = () => {
 
 
                     return (
-                        <div className="note-options" onClick={updateNote}>
+                        <div className="note-options">
 
                             <Note title={title} categoryColor={color} categoryName={categoryName} date={dateString} setTask={setTasks} task={tasks} index={index} />
                         </div>
