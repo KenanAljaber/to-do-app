@@ -1,12 +1,14 @@
-<img src="./src/assets/logo.png" height="100px">
+<img src="./src/assets/krugerLogo.png" height="100px">
 
-# Kruger Star Playground
+# Kruger Star ToDo App <img src="./src/assets/toDo.png" width="50px">
 
->This project was created using React JavaScript, Html, CSS, and it is deployed on Netlify, The porpuse of this site is to implement many concepts and tecniques that we have learned so far in the course, It includes serval simple react apps like Age Calculator, IMC Calculator and a simple clock.
+>I created this project using React, Html+CSS only, if you want to see a live version, check the live demo section down below
 
 # Preview of the website
 
-<img src="./src/assets/ScreenShot.png"/>
+<img src="./src/assets/todoScreenShot.png"/>
+
+>ToDo App allows users to create, edit and delete tasks, you also can categorize tasks and build categories.
 
 ## Built with
 
@@ -17,14 +19,14 @@
 
 ## Live Demo
 
-<a href="https://kruger-star-playground-kj.netlify.app/">Live Demo</a>
+<a href="https://to-do-app-kj.netlify.app/">Live Demo</a>
 
 
 ## Run it locally
 
  ### Setup
 
- - Clone this repo using `git clone https://github.com/Kenoisplaying/personal-site
+ - Clone this repo using `git clone https://github.com/Kenoisplaying/to-do-app`
 
  ### Commands
 
@@ -48,13 +50,6 @@
 Give a ⭐ if you like this project!
 
 
-## Acknowledgments
-
-- Design by: [JS](https://github.com/Juanse7793)
-
-## 📝 License
-
-This project is [MIT](./MIT.md) licensed.
 
 
  

@@ -8,21 +8,26 @@ const NoteList = () => {
 
     const [category, setCategory] = useState(undefined);
     const [showCategories, setShowCategories] = useState(true);
+    //the default category
     const [categoriesList, setCategoriesList] = useState([{
         color: "#DDFFF7",
-        name: "default"
+        name: "normal"
     }]);
     const [tasks, setTasks] = useState([]);
 
-
+    //when the user want to choose a category we change showCategories
     const handleDropdownList = () => {
 
         setShowCategories(!showCategories);
     }
 
+
+    //this method will be triggerd when the user want to add a task/todo 
     const addNote = () => {
+        //the taskBody 
         let taskBody = document.getElementById("noteTextInput").value;
         if (taskBody) {
+            //we create task object twith the default category
             let task = {
                 title: taskBody,
                 category: {
@@ -30,51 +35,61 @@ const NoteList = () => {
                     color: categoriesList[0].color
                 }
             };
+            //but if category is not false so user has choosed another category than default
+            //so we set that category as the category of the task
             if (category) {
-               
+
                 task.category.name = category.name;
                 task.category.color = category.color;
             }
+            //update the tasks list by adding the old tasks and adding the new task to the final
             setTasks(tasks => [...tasks, task]);
+            //empty the text field 
             document.getElementById("noteTextInput").value = "";
 
         } else {
+            //in case user tries to add task while text field is empty 
             alert("plase type something to add a task!")
         }
-   
+
     }
 
+    //the method that will handle adding a new category
     const addCategory = () => {
-
+        //getting the color picked from the color picker and the name from the text field
         let color = document.getElementById("favcolor").value;
         let categoryName = document.getElementById("categoryTextInput").value;
+        //if textfield is not empty 
         if (categoryName) {
-
+            //create category object
             let newCategory = {
                 name: categoryName,
                 color: color
             };
-
+            //if category does not exist then we update the categories list
             if (!categoryExist(newCategory)) {
                 setCategoriesList(categoriesList => [...categoriesList, newCategory]);
             }
+            //empty the category text feild 
             document.getElementById("categoryTextInput").value = "";
         } else {
+            //case the category name is empty
             alert("please type the name of the category!");
 
         }
 
     }
-
+    /**
+     * this method will check wheather category does exist in the categoriesList 
+     * @param {the category we will check if it exists} catg 
+     * @returns true if @param catg exist and false if it is not 
+     */
     const categoryExist = (catg) => {
-
-
         for (let i = 0; i < categoriesList.length; i++) {
             let current = categoriesList[i];
             if (current.name == catg.name && current.color == catg.color) {
                 alert("Category already exits!");
                 return true;
-
             }
             if (current.name == catg.name) {
                 alert("Category name already exits!");
@@ -82,12 +97,9 @@ const NoteList = () => {
             } if (current.color == catg.color) {
                 alert("Category color already exits!");
                 return true;
-
             }
         }
         return false;
-
-
 
     }
 
@@ -96,11 +108,10 @@ const NoteList = () => {
 
         <div className="noteList-container">
             <div className="noteList-head-container">
-
-
                 <div className="noteList-add-note-contianer">
                     <input type="text" placeholder="Type your task.." className="noteList-add-note-input" id="noteTextInput" />
                     <div className="noteList-dropdown" onClick={handleDropdownList}>
+                    
                         <span> {!category ? "Choose a category" : <Category name={category.name} color={category.color} />}</span>
                         <div className="dropdown-content" style={{ display: showCategories ? "none" : "block" }}>
                             {
